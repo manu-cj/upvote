@@ -1,6 +1,7 @@
 <template>
 <div id="app">
-  <Item-List/>
+<!--  <Item-List/>-->
+  <ParentComponent/>
 
 
 
@@ -11,12 +12,14 @@
 <script>
 
 
-import ItemList from "@/components/Item-List";
+// import ItemList from "@/components/Item-List";
 
+import ParentComponent from "@/components/ParentComponent";
 export default {
   name: 'App',
   components: {
-    ItemList,
+    ParentComponent,
+    // ItemList,
 
 
   },
