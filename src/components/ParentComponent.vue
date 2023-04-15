@@ -12,6 +12,7 @@ import ChildComponent from "@/components/ChildComponent";
 
 export default {
   name: "ParentComponent",
+  emits : ["increment", "decrement"],
   components: {
     ChildComponent
   },
