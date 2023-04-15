@@ -1,17 +1,32 @@
 <template>
-<div id="app"></div>
+<div id="app">
+  <Item-List/>
+
+
+
+</div>
 
 </template>
 
 <script>
 
 
+import ItemList from "@/components/Item-List";
+
 export default {
   name: 'App',
   components: {
+    ItemList,
 
-  }
+
+  },
+
+
 }
+
+
+
+
 </script>
 
 <style>
