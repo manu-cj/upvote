@@ -30,6 +30,8 @@ export default {
         {id: 2, name: 'Item 2', valor: 12},
         {id: 3, name: 'Item 3', valor: 8},
       ],
+
+
     }
   },
   props: {

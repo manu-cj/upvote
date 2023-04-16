@@ -7,6 +7,10 @@
         </v-tab>
 
         <v-tab style="background-color: teal; margin: 2px">
+          <router-link to="/login" style="text-decoration-line: none; color: azure">Login</router-link>
+        </v-tab>
+
+        <v-tab style="background-color: teal; margin: 2px">
           <router-link to="/item-list" style="text-decoration-line: none; color: azure">Item List</router-link>
         </v-tab>
 
