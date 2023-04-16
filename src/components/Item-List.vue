@@ -1,23 +1,21 @@
 <template>
-  <div>
-    <h2>Item List</h2>
-    <ul v-for="item in items" :key="item.id">
-      <li>{{ item.name }}</li>
+  <h2>Item List</h2>
+  <div id="items">
+    <div class="item" v-for="item in items"
+         :key="item.id">
+      <v-card :title="item.name" :text="'Quantités : ' + item.valor" variant="tonal" style="border: #399b84 3px solid;">
+        <v-card-actions>
+          <v-btn variant="tonal">
+            <button @click="item.valor++">ajouter</button>
+          </v-btn>
 
-      <li>Quantités : {{ item.valor }}
-        <button @click="item.valor++">ajouter</button>
-        <button @click="item.valor--">retirer</button>
-      </li>
-    </ul>
-  </div>
-  <br><br>
-  <div>
-    <h2>User List</h2>
-    <ul>
-      <li v-for="user in users" :key="user.id"> {{user.name}}</li>
-    </ul>
-  </div>
-
+          <v-btn variant="outlined">
+            <button @click="item.valor--">retirer</button>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </div>
+</div>
 </template>
 
 <script>
@@ -45,5 +43,15 @@ export default {
 </script>
 
 <style scoped>
+#items {
+  width:40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
 
+#item v-card {
+
+}
 </style>

@@ -1,44 +1,47 @@
 <template>
-<div id="app">
-<!--  <Item-List/>-->
-  <ParentComponent/>
+  <v-app>
+    <v-main>
+      <div id="menu">
+        <v-tab style="background-color: teal; margin: 2px">
+          <router-link to="/" style="text-decoration-line: none; color: azure">Home</router-link>
+        </v-tab>
 
+        <v-tab style="background-color: teal; margin: 2px">
+          <router-link to="/item-list" style="text-decoration-line: none; color: azure">Item List</router-link>
+        </v-tab>
 
+        <v-tab style="background-color: teal; margin: 2px">
+          <router-link to="/about" style="text-decoration-line: none; color: azure">About</router-link>
+        </v-tab>
+        <router-view/>
+      </div>
 
-</div>
+    </v-main>
+  </v-app>
 
 </template>
 
 <script>
 
 
-// import ItemList from "@/components/Item-List";
-
-import ParentComponent from "@/components/ParentComponent";
 export default {
   name: 'App',
-  components: {
-    ParentComponent,
-    // ItemList,
 
+  data: () => ({
+    //
+  }),
 
-  },
-
-
+  components: {}
 }
-
-
-
-
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+router-link {
+  text-decoration-line: none;
+  color: azure;
 }
+
+v-tab {
+  background-color: teal;
+}
+
 </style>

@@ -13,11 +13,9 @@ export default {
 
   methods: {
     increment() {
-
       this.$emit('increment');
     },
     decrement() {
-
       this.$emit('decrement');
     }
   }
